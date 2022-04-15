@@ -49,48 +49,36 @@ public class StudentDatabase {
 				
 				if(knowMore.equals("y") && studentInfoSelection.equals("favorite movie")) {
 					System.out.println(studentNames[studentSelection - 1] + "'s favorite class is: " + favoriteClass[studentSelection - 1]);
-					do {
-						System.out.print("Would you like to learn more about a different student? (y/n): ");
-						continueCycle = scnr.next().toLowerCase();
-						if(continueCycle.equals("y")) {
-							scnr.nextLine();
-						} else if (continueCycle.equals("n")) {
-							System.out.println("Thank you! Have a great day!");
-							scnr.close();
-							System.exit(0);
-						} else {
-							System.out.println("Sorry, that's not a valid choice. Try again. ");
-						}
-						}while(!(continueCycle.equals("y") || continueCycle.equals("n")));
-				} else if (knowMore.equals("y") && studentInfoSelection.equals("favorite class")) {
-					System.out.println(studentNames[studentSelection - 1] + "'s favorite movie is: " + favoriteMovie[studentSelection - 1]);
-					do {
 					System.out.print("Would you like to learn more about a different student? (y/n): ");
 					continueCycle = scnr.next().toLowerCase();
 					if(continueCycle.equals("y")) {
 						scnr.nextLine();
-					} else if (continueCycle.equals("n")) {
+					} else {
+						System.out.println("Thank you! Have a great day!");
+						scnr.close();
+						System.exit(0);
+					}
+				} else if (knowMore.equals("y") && studentInfoSelection.equals("favorite class")) {
+					System.out.println(studentNames[studentSelection - 1] + "'s favorite movie is: " + favoriteMovie[studentSelection - 1]);
+					System.out.print("Would you like to learn more about a different student? (y/n): ");
+					continueCycle = scnr.next().toLowerCase();
+					if(continueCycle.equals("y")) {
+						scnr.nextLine();
+					} else {
+						System.out.println("Thank you! Have a great day!");
+						scnr.close();
+						System.exit(0);
+					}				
+				} else if (knowMore.equals("n")){
+					System.out.print("Would you like to learn more about a different student? (y/n): ");
+					continueCycle = scnr.next().toLowerCase();
+					if(continueCycle.equals("n")) {
 						System.out.println("Thank you! Have a great day!");
 						scnr.close();
 						System.exit(0);
 					} else {
-						System.out.println("Sorry, that's not a valid choice. Try again. ");
+						scnr.nextLine();
 					}
-					}while(!(continueCycle.equals("y") || continueCycle.equals("n")));
-				} else if (knowMore.equals("n")){
-					do {
-						System.out.print("Would you like to learn more about a different student? (y/n): ");
-						continueCycle = scnr.next().toLowerCase();
-						if(continueCycle.equals("y")) {
-							scnr.nextLine();
-						} else if (continueCycle.equals("n")) {
-							System.out.println("Thank you! Have a great day!");
-							scnr.close();
-							System.exit(0);
-						} else {
-							System.out.println("Sorry, that's not a valid choice. Try again. ");
-						}
-					}while(!(continueCycle.equals("y") || continueCycle.equals("n")));
 				} else {
 					System.out.println("Invalid selection. Try again.");
 					continueCycle = "y";
