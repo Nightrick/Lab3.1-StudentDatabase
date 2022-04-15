@@ -39,7 +39,7 @@ public class StudentDatabase {
 					} else if (studentInfoSelection.equals("favorite class")) {
 						System.out.println(studentNames[studentSelection - 1] + "'s favorite class is: " + favoriteClass[studentSelection - 1]);
 					} else {
-						System.out.print("That wasn't an option. Let's try again. Enter \"favorite movie\" or \"favorite class\": ");
+						System.out.print("That wasn't an option. Let's try again. ");
 					}
 					} while(!(studentInfoSelection.equals("favorite movie") || studentInfoSelection.equals("favorite class")));
 				
@@ -85,6 +85,7 @@ public class StudentDatabase {
 				
 				} catch (ArrayIndexOutOfBoundsException e) {
 					System.out.print("That's not an option. ");
+					scnr.next();
 			} 
 		}
 		
@@ -106,5 +107,8 @@ public class StudentDatabase {
 				System.out.print("That's not an option. Please enter a number between 1 and 5: ");
 			}
 		}
-	}	
+	}
+	
+	
+
 }
