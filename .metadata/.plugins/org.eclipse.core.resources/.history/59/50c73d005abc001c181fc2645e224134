@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class StudentDatabase {
+
+	public static void main(String[] args) {
+		
+		Scanner scnr = new Scanner(System.in);
+		
+		String[] studentNames = {"Kim", "Sean", "Noor", "Aida", "David"};
+		
+		String[] favoriteClass = {"Biology", "Thermodynamics", "Interior Design", "Trigonometry", "Biochemistry"};
+		
+		String[] favoriteMovie = {"Lady in the Water", "Parasite", "My Big Fat Greek Wedding", "Step Brothers", "Casino Royale"};
+		
+		System.out.println("Hello there! Please select a student that you would like to learn more about!");
+		
+		for(int i = 0; i < studentNames.length; i++) {
+			System.out.println(i + ". " + studentNames[i]);
+		}
+		
+		
+
+	}
+
+}
